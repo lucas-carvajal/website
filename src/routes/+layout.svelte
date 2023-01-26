@@ -1,3 +1,6 @@
+<script lang="ts">
+    import "@fontsource/montserrat"
+</script>
 
 <div class="nav">
     <div class="elements">
@@ -39,8 +42,16 @@
         font-size: 3vw;
     }
 
+    a:hover {
+        font-weight: 900;
+    }
+
     .main {
         margin-left: 20%;
         padding: 4em;
+    }
+
+    div {
+        font-family: 'montserrat', sans-serif;
     }
 </style>

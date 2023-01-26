@@ -1,14 +1,15 @@
 <script lang="ts">
     import "@fontsource/montserrat"
+    import NavButton from "../lib/NavButton.svelte"
 </script>
 
 <div class="nav">
     <div class="elements">
-        <a href="/">Lucas</a>
-        <a href="/work">Work</a>
-        <a href="/education">Education</a>
-        <a href="/projects">Projects</a>
-        <a href="/contact">Contact</a>
+        <NavButton route="/" title="Lucas" />
+        <NavButton route="/work" title="Work" />
+        <NavButton route="/education" title="Education" />
+        <NavButton route="/projects" title="Projects" />
+        <NavButton route="/contact" title="Contact" />
     </div>
 </div>
  
@@ -31,19 +32,6 @@
         display: flex;
         justify-content: center;
         align-items: center; 
-    }
-
-    a {
-        display: block;
-        margin: 0.8em 0;
-        padding: 10px;
-        text-decoration: none;
-        color: black;
-        font-size: 3vw;
-    }
-
-    a:hover {
-        font-weight: 900;
     }
 
     .main {

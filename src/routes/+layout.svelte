@@ -12,7 +12,7 @@
         <NavButton route="/contact" title="Contact" />
     </div>
 </div>
- 
+
 <div class="main">
     <slot></slot>
 </div>

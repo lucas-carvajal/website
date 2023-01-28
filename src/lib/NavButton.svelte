@@ -1,7 +1,11 @@
 <script lang="ts">
+    import { page } from '$app/stores';
+
     export let route: string;
     export let title: string;
 	
+    $: isActive = route === $page.url.pathname;;
+
 	let tick = 0;	
 	let gradientState = `white, white`
 	let interval: any
@@ -35,21 +39,34 @@
 	$: if(tick < 0) tick = 0
 </script>
 
-
-<div on:mouseenter={() => animateIn()}
-    on:mouseleave={() => animateOut()}
->
-<div class="element">
-    <a href={route} 
-        style:border-style={`solid`}
-        style:border-width={`0.1em`}
-        style:border-image={`linear-gradient(${gradientState}) 0% 0 100% 0/0px 0 3px 0 stretch`}
+{#if isActive}
+    <div on:mouseleave={() => animateOut()}>
+        <div class="element">
+            <a href={route}
+                style:border-style={`solid`}
+                style:border-width={`0.1em`}
+                style:border-image={`linear-gradient(black, black) 0% 0 100% 0/0px 0 3px 0 stretch`}
+                style:font-weight={`bolder`}
+            >
+                {title}
+            </a>
+        </div>
+    </div>
+{:else}
+    <div on:mouseenter={() => animateIn()}
+        on:mouseleave={() => animateOut()}
     >
-        {title}
-    </a>
-</div>
-
-</div>
+        <div class="element">
+            <a href={route}
+                style:border-style={`solid`}
+                style:border-width={`0.1em`}
+                style:border-image={`linear-gradient(${gradientState}) 0% 0 100% 0/0px 0 3px 0 stretch`}
+            >
+                {title}
+            </a>
+        </div>
+    </div>
+{/if}
 
 <style>
     .element {

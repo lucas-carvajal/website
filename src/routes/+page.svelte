@@ -1,5 +1,29 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Hey! I'm Lucas</p> 
-<p>Visit my LinkedIn <a href="https://www.linkedin.com/in/lucas-carvajal/">here</a></p>
+<!-- TODO - typewriter effect for h1 -->
 
-<a href="/about">About my site</a>
+<div class="wrapper">
+    <div class="content">
+        <h1>Hey, I'm Lucas</h1>
+        <p>Lorem ipsum dolor sic est it</p>
+        <a href="/about">About my site</a>
+        <!-- TODO Modify 404 site: Whoops, still need to do some work here -->
+    </div>
+</div>
+
+<style>
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+    .content {
+        padding: 3em;
+    }
+
+    div {
+        font-family: 'montserrat', sans-serif;
+        height: wrap-content;
+        width: 100%;
+    }
+</style>

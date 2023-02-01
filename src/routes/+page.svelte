@@ -4,7 +4,7 @@
     const greeting = "Hey, I'm Lucas";
     let typedChar = "";
     let index = 0;
-    
+
     /**
 	 * @type {string | number | NodeJS.Timer | undefined}
 	 */
@@ -52,6 +52,11 @@
 
     .content {
         padding: 3em;
+    }
+
+    h1 {
+        font-size: 4em;
+        font-weight: 900;
     }
 
     div {

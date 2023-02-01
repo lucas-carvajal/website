@@ -1,8 +1,41 @@
-<!-- TODO - typewriter effect for h1 -->
+<script>
+	import { onMount } from "svelte";
+
+    const greeting = "Hey, I'm Lucas";
+    let typedChar = "";
+    let index = 0;
+    
+    /**
+	 * @type {string | number | NodeJS.Timer | undefined}
+	 */
+    let typewriter;
+
+    const type = () => {
+        typewriter = setInterval(typeChar, 80);
+    }
+
+    const typeChar = () => {
+        if (index === 4) {
+            typedChar += " ";
+            clearInterval(typewriter);
+            setTimeout(() => type(), 320);
+            index++;
+        } else if (index < greeting.length) {
+            typedChar += greeting[index];
+            index++;
+        } else {
+            clearInterval(typewriter);
+        }
+    }
+
+    onMount(() => {
+        type();
+    });
+</script>
 
 <div class="wrapper">
     <div class="content">
-        <h1>Hey, I'm Lucas</h1>
+        <h1>{typedChar}</h1>
         <p>Lorem ipsum dolor sic est it</p>
         <a href="/about">About my site</a>
         <!-- TODO Modify 404 site: Whoops, still need to do some work here -->

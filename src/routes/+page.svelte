@@ -37,8 +37,6 @@
     <div class="content">
         <h1>{typedChar}</h1>
         <p>Lorem ipsum dolor sic est it</p>
-        <a href="/about">About my site</a>
-        <!-- TODO Modify 404 site: Whoops, still need to do some work here -->
     </div>
 </div>
 

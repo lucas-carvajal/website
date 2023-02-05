@@ -11,16 +11,60 @@
         <h2 class="institution">{institution}</h2>
         <p class="location">{location}</p>
     </div>
-    <h4 class="title">{title}</h4>
-    <p class="dates">{dates}</p>
-    <p class="description">{description}</p>
+    <div class="info">
+        <h4 class="title">{title}</h4>
+        <p class="dates">{dates}</p>
+    </div>
+    <p class="description">{@html description}</p>
 </div>
 
 <style>
     .card {
-        margin: 3em;
+        margin-top: 2em;
     }
     .header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .institution {
         display: inline;
+        margin: 0;
+        padding: 0.1em;
+        font-size: 1.5em;
+        align-self: flex-end;
+        font-weight: bolder;
+    }
+    .location {
+        display: inline;
+        float: right;
+        margin: 0;
+        padding: 0.1em;
+        font-size: 1em;
+        align-self: flex-end;
+    }
+    
+    .info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.5em;
+    }
+    .title {
+        display: inline;
+        margin: 0;
+        padding: 0.1em;
+        font-size: 1em;
+    }
+    .dates {
+        display: inline;
+        float: right;
+        margin: 0;
+        padding: 0.1em;
+        font-size: 1em;
+    }
+
+    .description {
+        margin-top: 0.5em;
+        padding: 0.5em 1em;
+        font-size: 1em;
     }
 </style>

@@ -7,7 +7,7 @@ export const educationActivities = [
         description: "Selected Coursework: <br> " + 
             "- Application Development for Mobile Devices <br> " + 
             "- Internet Application Design and Development <br> <br> " + 
-            "Term GPA: 3.85/4.00 <br> <br> Scholarship Awarded: <br> " + 
+            "Scholarship Awarded: <br> " + 
             "DAAD PROMOS Scholarship"
     },
     {

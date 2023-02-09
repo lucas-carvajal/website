@@ -27,6 +27,5 @@
         margin-top: 1em;
         text-decoration: none;
         color: black;
-        text-emphasis-color: red;
     }
 </style>

@@ -36,7 +36,10 @@
 <div class="wrapper">
     <div class="content">
         <h1>{typedChar}</h1>
-        <p>Lorem ipsum dolor sic est it</p>
+        <p>
+            I'm currently finishing my Bachelor's Degree in Computer Science at the University of Bamberg and doing Backend Engineering as a Working Student at 
+            <a target="_blank" rel="noopener noreferrer" href="https://de.scalable.capital/en">Scalable Capital</a>.
+        </p>
     </div>
 </div>
 
@@ -61,5 +64,10 @@
         font-family: 'montserrat', sans-serif;
         height: wrap-content;
         width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
     }
 </style>

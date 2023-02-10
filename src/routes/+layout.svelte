@@ -42,4 +42,8 @@
     div {
         font-family: 'montserrat', sans-serif;
     }
+
+    :global(body) {
+        background-color: #C6DCF5;
+    }
 </style>

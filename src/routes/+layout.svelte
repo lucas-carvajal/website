@@ -44,6 +44,16 @@
     }
 
     :global(body) {
-        background-color: #C6DCF5;
+        background-color: var(--background);
+        color: var(--text);
+    }
+
+    :global(:root) {
+        /* --background: #a1c8f4; */
+        --background: #ffffff;
+        /* --accent: #f4b087; */
+        --accent: #000000;
+        /* --text: #ffffff; */
+        --text: #000000;
     }
 </style>

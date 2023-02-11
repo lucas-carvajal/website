@@ -53,6 +53,6 @@
 
     a {
         text-decoration: none;
-        color: black;
+        color: var(--text);
     }
 </style>

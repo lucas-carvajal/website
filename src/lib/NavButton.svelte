@@ -1,5 +1,6 @@
 <script lang="ts">
     import { page } from '$app/stores';
+    import { backgroundColor, accentColor } from '../colors';
 
     export let route: string;
     export let title: string;
@@ -7,7 +8,7 @@
     $: isActive = route === $page.url.pathname;;
 
 	let tick = 0;	
-	let gradientState = `white, white`
+    let gradientState = `${backgroundColor}, ${backgroundColor}`
 	let interval: any
 	
     const createGradient = (colorIn: string, colorOut: string, percentage: number) => 
@@ -18,8 +19,8 @@
             tick = 0
             interval = setInterval(() => {
                 tick <= 100 ? 
-                    gradientState = createGradient("black", "white", tick) :
-                    gradientState = `black, black`;
+                    gradientState = createGradient(accentColor, backgroundColor, tick) :
+                    gradientState = `${accentColor}, ${accentColor}`;
                 tick = tick + 2
             }, 0.0001)
     }
@@ -29,8 +30,8 @@
             tick = 0
             interval = setInterval(() => {
                 tick <= 100 ? 
-                    gradientState = createGradient("white", "black", tick) :
-                    gradientState = `white, white`;
+                    gradientState = createGradient(backgroundColor, accentColor, tick) :
+                    gradientState = `${backgroundColor}, ${backgroundColor}`;
                 tick = tick + 2
             }, 0.0001)
     }
@@ -45,7 +46,7 @@
             <a href={route}
                 style:border-style={`solid`}
                 style:border-width={`0.1em`}
-                style:border-image={`linear-gradient(black, black) 0% 0 100% 0/0px 0 3px 0 stretch`}
+                style:border-image={`linear-gradient(${accentColor}, ${accentColor}) 0% 0 100% 0/0px 0 3px 0 stretch`}
                 style:font-weight={`bolder`}
             >
                 {title}
@@ -79,7 +80,7 @@
         display: inline-block;
         margin: 0.6em 0;
         text-decoration: none;
-        color: black;
+        color: var(--text);
         font-size: 2vw;
     }
 

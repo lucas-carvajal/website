@@ -45,6 +45,11 @@
         align-self: flex-end;
     }
 
+    .description {
+        padding: 0.5em 1em;
+        font-size: 1em;
+    }
+
     .tech {
         margin-top: 0.5em;
         padding: 0.5em 1em;

@@ -6,6 +6,7 @@
     export let title: string;
 	
     $: isActive = route === $page.url.pathname;;
+    $: isActive == false, animateOut();
 
 	let tick = 0;	
     let gradientState = `${backgroundColor}, ${backgroundColor}`
@@ -54,8 +55,22 @@
         </div>
     </div>
 {:else}
-    <div on:mouseenter={() => animateIn()}
-        on:mouseleave={() => animateOut()}
+    <div on:mouseenter={() => {
+            console.log(route + " animate IN")
+            animateIn()
+        }}
+        on:mouseleave={() => {
+            console.log(route + " animate OUT")
+            animateOut()
+        }}
+        on:touchstart={() => {
+            console.log(route + " animate IN")
+            animateIn()
+        }}
+        on:touchend={() => {
+            console.log(route + " animate OUT")
+            animateOut()
+        }}
     >
         <div class="element">
             <a href={route}

@@ -5,7 +5,7 @@ export const workActivities = [
         title: "Intern and Working Student", 
         dates: "May 2022 - Now",
         description: "Tasks Included: <br> " + 
-            "- Designed and Implemented the Backend for the Discovery Engine, showing clients related stocks on the stock details page <br> " +
+            "- Designed and Implemented the Backend for the Discovery Engine, showing clients related stocks on the stock details page <br> <br> " +
             // "- Designed and Implemented the Backend for the Transaction Export, giving clients the opportunity to download all their transactions in CSV format <br> <br>" +
             "Technologies Used Include: Kotlin, Spring Boot, AWS, Lambda, DynamoDB, SQS, GraphQL, Terraform"
     

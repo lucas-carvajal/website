@@ -68,6 +68,6 @@
 
     a {
         text-decoration: none;
-        color: var(--text);
+        color: var(--text-color);
     }
 </style>

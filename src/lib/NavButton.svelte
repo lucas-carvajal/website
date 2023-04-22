@@ -4,6 +4,8 @@
 
     export let route: string;
     export let title: string;
+
+    export let animateMenuOut: any
 	
     $: isActive = route === $page.url.pathname;;
     $: isActive == false, animateOut();
@@ -56,24 +58,20 @@
     </div>
 {:else}
     <div on:mouseenter={() => {
-            console.log(route + " animate IN")
             animateIn()
         }}
         on:mouseleave={() => {
-            console.log(route + " animate OUT")
             animateOut()
         }}
         on:touchstart={() => {
-            console.log(route + " animate IN")
             animateIn()
         }}
         on:touchend={() => {
-            console.log(route + " animate OUT")
             animateOut()
         }}
     >
         <div class="element">
-            <a href={route}
+            <a href={route} on:click={() => {animateMenuOut()}}
                 style:border-style={`solid`}
                 style:border-width={`0.1em`}
                 style:border-image={`linear-gradient(${gradientState}) 0% 0 100% 0/0px 0 3px 0 stretch`}
@@ -95,7 +93,7 @@
         display: inline-block;
         margin: 0.6em 0;
         text-decoration: none;
-        color: var(--text);
+        color: var(--text-color);
         font-size: 2vw;
     }
 

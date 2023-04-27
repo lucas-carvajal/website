@@ -99,7 +99,7 @@
 	@media (max-width: 750px) {
 		.nav {
 			margin-left: 0;
-			font-size: 2em;
+			font-size: 1.5vw;
 			width: 100vw;
 			left: var(--nav-offset);
 			position: fixed;
@@ -110,6 +110,7 @@
 			margin-left: 0;
 			padding: 4em;
 			font-size: 2vw;
+			width: 80vw;
 			right: var(--main-offset);
 			position: fixed;
 			overflow: hidden;

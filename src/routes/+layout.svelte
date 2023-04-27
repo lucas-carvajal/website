@@ -108,9 +108,9 @@
 
 		.main {
 			margin-left: 0;
-			padding: 4em;
+			padding: 8vw;
 			font-size: 2vw;
-			width: 80vw;
+			width: 84vw;
 			right: var(--main-offset);
 			position: fixed;
 			overflow: hidden;

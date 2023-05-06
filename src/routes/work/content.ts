@@ -8,7 +8,7 @@ export const workActivities = [
 			'Tasks Included: <br> ' +
 			'- Designed and Implemented the Backend for the Discovery Engine, showing clients related stocks on the stock details page <br> <br> ' +
 			// "- Designed and Implemented the Backend for the Transaction Export, giving clients the opportunity to download all their transactions in CSV format <br> <br>" +
-			'Technologies Used Include: Kotlin, Spring Boot, AWS, Lambda, DynamoDB, SQS, GraphQL, Terraform'
+			'Technologies Used Include: Kotlin, AWS, Lambda, DynamoDB, SQS, S3, Spring Boot, GraphQL, Terraform'
 	},
 	{
 		institution: 'Safectory',
